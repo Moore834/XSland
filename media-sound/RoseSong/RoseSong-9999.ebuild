@@ -292,5 +292,5 @@ RDEPEND="
 	media-plugins/gst-plugins-soup
 "
 DEPEND="
-	${RDPEND}
+	${RDEPEND}
 "
