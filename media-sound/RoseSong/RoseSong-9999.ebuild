@@ -272,7 +272,7 @@ inherit cargo
 DESCRIPTION="Command line player built by rust based on gstreamer decoding and playing bilibili audio, using dbus for inter-process communication."
 HOMEPAGE="https://github.com/huahuadeliaoliao/${PN}"
 SRC_URI="
-	https://github.com/huahuadeliaoliao/${PN}/archive/refs/heads/main.zip
+	https://github.com/huahuadeliaoliao/${PN}/archive/refs/heads/main.zip -> ${P}.zip
 	${CARGO_CRATE_URIS}
 "
 
@@ -286,11 +286,15 @@ SLOT="0"
 KEYWORDS="~amd64"
 S="${WORKDIR}/${PN}-main"
 
-RDEPEND="
+BDEPEND="
 	media-libs/gstreamer
+
+"
+RDEPEND="
 	sys-apps/dbus
 	media-plugins/gst-plugins-soup
 "
 DEPEND="
 	${RDEPEND}
+	${BDEPEND}
 "
